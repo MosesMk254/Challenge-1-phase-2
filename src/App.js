@@ -3,6 +3,7 @@ import "./App.css";
 import TransactionTable from "./components/TransactionTable";
 import TransactionForm from "./components/TransactionForm";
 import SearchOption from "./components/Search";
+import DisplayHeader from "./components/Header";
 
 const TransactionsList = [
   {
@@ -46,6 +47,7 @@ const TransactionsList = [
 function App() {
   return (
     <div>
+      <DisplayHeader />
       <SearchOption />
       <TransactionForm />
       <TransactionTable transactions={TransactionsList} />
