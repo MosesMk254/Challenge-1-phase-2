@@ -48,14 +48,21 @@ function App() {
   const addTransaction = (newTransaction) => {
     setTransaction([...transactions, newTransaction]);
   };
+
+  const handleSearch = (searchTerm) => {
+    const searchFilter = transactions.filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setTransaction(searchFilter);
+  };
+
   return (
     <div>
       <DisplayHeader />
-      <SearchOption />
+      <SearchOption onSearch={handleSearch} />
       <TransactionForm onAddTrasaction={addTransaction} />
       <TransactionTable transactions={transactions} />
     </div>
   );
 }
-
 export default App;
