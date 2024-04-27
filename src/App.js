@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import TransactionTable from "./components/TransactionTable";
 import TransactionForm from "./components/TransactionForm";
+import SearchOption from "./components/Search";
 
 const TransactionsList = [
   {
@@ -45,6 +46,7 @@ const TransactionsList = [
 function App() {
   return (
     <div>
+      <SearchOption />
       <TransactionForm />
       <TransactionTable transactions={TransactionsList} />
     </div>
