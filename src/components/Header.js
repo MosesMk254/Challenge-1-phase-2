@@ -1,8 +1,9 @@
 import React from "react";
+import "../App.css";
 
 const DisplayHeader = () => {
   return (
-    <div>
+    <div className="App-header">
       <h1>The Royal Bank of Flatiron</h1>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../App.css";
 
 const SearchOption = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,6 +11,7 @@ const SearchOption = ({ onSearch }) => {
   return (
     <div>
       <input
+        className="Search-input"
         type="text"
         placeholder="Search your Recent Transactions"
         value={searchTerm}
